@@ -1,42 +1,25 @@
 # AI-driven-Cyber-Security-Framework
 
-## Methodology
-The systematic approach comprises three main components. First, an ensemble learning classification model is developed using the VCDB dataset, with its performance evaluated through k-fold cross-validation and benchmarked against other models. This quantitative method provides an objective assessment of an organization's cybersecurity posture based on historical data. Second, SHAP graphs are integrated to enhance explainability, allowing stakeholders to understand the factors influencing the model's decisions and fostering trust in high-stakes environments like critical infrastructure. Finally, Meta's Llama 3.1 8B Instruct LLM is fine-tuned on a custom cybersecurity dataset to translate risk predictions into actionable recommendations. This fine-tuned model is integrated with the GPT4ALL interface for ease of use and quantized for efficiency.
+## Abstract
+Cyber warfare has revolutionized global security landscapes by rendering physical distance irrelevant,
+with attacks constrained only by bandwidth and latency. The widespread reach of cyber threats presents
+significant challenges in protecting Critical Infrastructure (CI), the backbone of modern society. The
+interconnected nature of communication networks, where ISPs lease lines to both government and
+commercial entities, and satellite corporations provide bandwidth across multiple countries, creates
+vulnerabilities that adversaries exploit using powerful tools similar to those of legitimate entities
+highlighting the urgent need for comprehensive and ethically sound frameworks for CI protection.
 
-## Results
-### Classification Model Results
-The effectiveness of the cyber risk prediction model was assessed using the test dataset, representing 20% of the overall dataset. The model demonstrated high proficiency in classifying cyber threat types, achieving a classification accuracy of 90.81%. 
-| Class           | Precision | Recall | F1-score | Support |
-|-----------------|-----------|--------|----------|---------|
-| 0               | 0.95      | 0.85   | 0.90     | 126     |
-| 1               | 0.90      | 0.84   | 0.87     | 319     |
-| 2               | 0.45      | 0.58   | 0.51     | 43      |
-| 3               | 0.99      | 0.87   | 0.93     | 294     |
-| 4               | 0.96      | 0.96   | 0.96     | 331     |
-| 5               | 0.96      | 1.00   | 0.98     | 415     |
-| 6               | 0.40      | 1.00   | 0.57     | 2       |
-| 7               | 0.42      | 0.84   | 0.56     | 37      |
-| **Accuracy**    |           |        | 0.91     | 1567    |
-| **Macro average** | 0.75    | 0.87   | 0.78     | 1567    |
-| **Weighted average** | 0.93 | 0.91   | 0.91     | 1567    |
+This research presents an innovative AI-driven framework for enhancing cybersecurity practices in
+critical infrastructure organizations. The methodology involves developing an ensemble cyber risk
+prediction model, incorporating SHAP graphs for model explainability, and fine-tuning the Llama 3.1 LLM
+to generate tailored cybersecurity policy recommendations based on the predicted risks. The
+implemented model achieved a 90.81% accuracy in cyber risk prediction using the XGBoost algorithm
+and the LLM's ability to generate context-specific recommendations demonstrate the potential of AI in
+improving cyber risk assessment and offering a powerful tool for proactive cybersecurity management
+for CI organisations.
 
-![image](https://github.com/user-attachments/assets/03d43e40-99cb-4639-9304-c9565eeff061)
-
-
-### Explainability Results
-The SHAP beeswarm plot visualizes the impact of each feature on the model's output across all samples. The horizontal axis represents the SHAP value, which indicates the contribution of a feature to pushing the model’s prediction higher (to the right) or lower (to the left). The colour gradient from blue to red represents the feature value, with blue indicating a low value and red indicating a high value.
-
-![image](https://github.com/user-attachments/assets/a4ea69c4-7442-4cb0-ab4e-d9e8b80cecd2)
-
-The SHAP bar plot further quantified the average impact of each feature. It aggregates the SHAP values across all samples, providing the mean absolute SHAP value for each feature. This plot quantifies the average contribution of each feature to the model's predictions, regardless of direction (positive or negative).
-
-![image](https://github.com/user-attachments/assets/375706d5-b786-40a1-9fa1-9d633f554631)
-
-
-### Policy Recommendation Model Results
-The policy recommendation LLM was evaluated based on its ability to generate relevant, accurate, and applicable recommendations for various cyber risk scenarios. The evaluation process involved testing the model on a diverse set of scenarios representing different threat landscapes. The relevance, applicability, and coherence of responses were considered to assess the quality of the recommendations.
-Examples of the recommendations generated by the LLM for different scenarios are illustrated below to provide an understanding of how the model performs.
-
-![image](https://github.com/user-attachments/assets/2195fd3d-30a7-46b5-93cf-738bc1acc38b)
-![image](https://github.com/user-attachments/assets/1e9ad12f-5f5c-43b2-a794-1d15edf76752)
-
+## Files 
+- cyber risk prediction model.ipynb - jupyter notebook for risk prediction model
+- cyber policy recommendation model.ipynb - jupyter notebook for finetuning Llama 3.1 LLM
+- data.xlsx - pre processed VCDB dataset for training risk prediction model
+- alpaca dataset.json - custom dataset for finetuning LLM for cyber applications
