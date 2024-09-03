@@ -23,3 +23,4 @@ for CI organisations.
 - cyber policy recommendation model.ipynb - jupyter notebook for finetuning Llama 3.1 LLM
 - data.xlsx - pre processed VCDB dataset for training risk prediction model
 - alpaca dataset.json - custom dataset for finetuning LLM for cyber applications
+- To access the fine-tuned LLM which is a 8GB .gguf file please email me.
