@@ -12,7 +12,7 @@ highlighting the urgent need for comprehensive and ethically sound frameworks fo
 This research presents an innovative AI-driven framework for enhancing cybersecurity practices in
 critical infrastructure organizations. The methodology involves developing an ensemble cyber risk
 prediction model, incorporating SHAP graphs for model explainability, and fine-tuning the Llama 3.1 LLM
-to generate tailored cybersecurity policy recommendations based on the predicted risks. The
+using the Unsloth library to generate tailored cybersecurity policy recommendations based on the predicted risks. The
 implemented model achieved a 90.81% accuracy in cyber risk prediction using the XGBoost algorithm
 and the LLM's ability to generate context-specific recommendations demonstrate the potential of AI in
 improving cyber risk assessment and offering a powerful tool for proactive cybersecurity management
